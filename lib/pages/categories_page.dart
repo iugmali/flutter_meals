@@ -9,13 +9,7 @@ class CategoriesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text("Categories"),
-            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          ),
-          body: GridView(
+    return GridView(
             padding: const EdgeInsets.all(25),
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: 200,
@@ -30,7 +24,6 @@ class CategoriesPage extends StatelessWidget {
                       key: Key(e.id),
                     ))
                 .toList(),
-      ),
-    ));
+      );
   }
 }
