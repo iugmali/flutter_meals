@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meals/data/dummy_data.dart';
-import 'package:flutter_meals/models/meal.dart';
 
 class MealDetailPage extends StatelessWidget {
   static const routeName = "/meal-detail";
@@ -49,6 +48,12 @@ class MealDetailPage extends StatelessWidget {
                 .of(context)
                 .colorScheme
                 .inversePrimary,
+          ),
+          floatingActionButton: FloatingActionButton(
+            child: const Icon(Icons.delete),
+            onPressed: () {
+              Navigator.of(context).pop(mealId);
+            },
           ),
           body: SingleChildScrollView(
             child: Column(
